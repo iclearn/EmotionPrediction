@@ -1,4 +1,21 @@
 # EmotionPrediction
 Emotion State Prediction Using Physiological Signals in Real Time
 
-EmotionPredictionTopology runs the topology for Apache Storm. The spout class takes the input from a file, bolt class predicts the emotional state and writes theoutput to a output file. The output file can then be used to visualize the predictionson a browser by running index.html file.
+featureExtraction.R extracts features from the raw data (obtained from MIT Media Labs) and creates classification models using the H2O AI platform with the following algorithms.
+
+Model          - File
+Deep learning  - DeepLearningModel.java
+Gradient Boosting Machine - GBMModel.java
+Naaive Bayes Classification - NaiveBayesModel.java
+
+EmotionPredictionDataSpout.java contains the spout class for the topologies created in Apache Storm
+
+EmotionPredictionTopology.java is the topology using the GBMModel for classification.
+
+EmotionPredictionTopologyDL.java is the topology using the Deep Learning for classification.
+
+Index.html is the html page that offers fun visualization of the emotional state in real time.
+
+Change the paths in the files to point to your data or output files.
+
+View Project.mp4 to see the project running.
